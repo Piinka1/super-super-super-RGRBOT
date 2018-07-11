@@ -102,7 +102,7 @@ if (message.author.bot) return;
     }
 
 });
-var prefix = "*";
+var prefix = "-";
 
 client.on('message', message => {
     if (message.author.bot) return;
@@ -129,7 +129,7 @@ client.on('message', message => {
 
 
 });
-var prefix = "*";
+var prefix = "-";
 client.on('message', message => {
     if(message.content == prefix + 'server') {
         var servername = message.guild.name
@@ -157,7 +157,7 @@ client.on('message', message => {
     }
 });
 client.on("message", message => {
-    var prefix = "+";
+    var prefix = "-";
  
             var args = message.content.substring(prefix.length).split(" ");
             if (message.content.startsWith(prefix + "clear")) {
