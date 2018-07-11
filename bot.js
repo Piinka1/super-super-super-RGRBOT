@@ -199,7 +199,7 @@ if(message.content.split(' ')[0] == '*bc') {
         message.guild.members.forEach(m => {
             var bc = new Discord.RichEmbed()             
     .setColor('#ff0000')
-                 .addField('RGR ANNONCE, args)
+                 .addField('ّ', args, args)
             m.send(``,{embed: bc});
         });
     }
