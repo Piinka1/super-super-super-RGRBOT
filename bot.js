@@ -79,7 +79,7 @@ client.on('message', message => {
 if (message.content === '*help') {
          let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)    
-      .addField("** مبرمج البوت :wrench: **","**@!      i1sυнαɪв ☕ᴶᴮᴿ#4272  , @! ϻ ~ ✘_♥ ツ#2275  **")
+      .addField("** مبرمج البوت :wrench: **","**@!      Pablo_Smith ☕ᴶᴮᴿ#4272  , @! ϻ ~ ✘_♥ ツ#2275  **")
 .setColor('RANDOM')
   message.author.sendEmbed(embed);
     }
@@ -171,7 +171,7 @@ client.on("message", message => {
         color: 0x06DF00,
         description: "تم مسح الرسائل بنجاح",
         footer: {
-          text: "Desert Bot"
+          text: "RGR_BOT"
         }
       }}).then(msg => {msg.delete(3000)});
                           }
@@ -179,7 +179,7 @@ client.on("message", message => {
      
 });
 client.on('ready',  () => {
-  console.log('By : i1Suhaib');
+  console.log('By : Pablo_Smith');
   console.log(`Logged in as * [ " ${client.user.username} " ] servers! [ " ${client.guilds.size} " ]`);
   console.log(`Logged in as * [ " ${client.user.username} " ] Users! [ " ${client.users.size} " ]`);
   console.log(`Logged in as * [ " ${client.user.username} " ] channels! [ " ${client.channels.size} " ]`);
@@ -197,9 +197,7 @@ if(message.content.split(' ')[0] == '*bc') {
                                       .addField('تم الارسال بواسطة :', "<@" + message.author.id + ">")
                  message.channel.sendEmbed(embed);
         message.guild.members.forEach(m => {
-            var bc = new Discord.RichEmbed()
-.addField('**● Sender  :**', `*** → ${message.author.username}#${message.author.discriminator}***`)
-            .addField('***● Server  :***', `*** → ${message.guild.name}***`)               
+            var bc = new Discord.RichEmbed()             
     .setColor('#ff0000')
                  .addField('ّ', args)
             m.send(``,{embed: bc});
