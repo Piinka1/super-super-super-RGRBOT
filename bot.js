@@ -348,7 +348,7 @@ case "-play":
         }
             var voiceConnection = client.voiceConnections.first();
 
-            break;
+       
 }
 });
 client.login(process.env.BOT_TOKEN);
