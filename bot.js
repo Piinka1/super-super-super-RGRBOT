@@ -322,4 +322,11 @@ client.on('message', message => {
   console.log('[id] Send By: ' + message.author.username)
     }
 });
+client.on("guildMemberAdd", member => {
+  member.createDM().then(function (channel) {
+  return channel.send(`:rose:  ولكم نورت السيرفر:rose: 
+:crown:اسم العضو  ${member}:crown:  
+انت العضو رقم ${member.guild.memberCount} `) 
+}).catch(console.error)
+})
 client.login(process.env.BOT_TOKEN);
