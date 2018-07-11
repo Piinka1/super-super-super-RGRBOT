@@ -332,9 +332,9 @@ client.on('message', function (message) {
     switch (command) {
         case "-join":
         if(message.guild.voiceConnection){
-            message.reply('I'm Already In A Voice Connection!');
+            message.reply('I m Already In A Voice Connection!');
         }else if(!message.member.voiceChannel){
-            message.reply('You're Not In A Voice Channel!');
+            message.reply('You re Not In A Voice Channel!');
         }else{
     let channel = message.member.voiceChannel;
     channel.join();
@@ -342,7 +342,7 @@ client.on('message', function (message) {
             break;
 case "-play":
         if(!message.guild.voiceConnection){
-            message.reply('I'm Not In A Voice Channel!');
+            message.reply('Im Not In A Voice Channel!');
         }else{
 //كود بدء الموسيقى مالك
         }
