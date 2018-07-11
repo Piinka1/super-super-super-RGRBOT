@@ -322,14 +322,4 @@ client.on('message', message => {
   console.log('[id] Send By: ' + message.author.username)
     }
 });
-client.on('message', message => {
-if (message.content.startsWith("!kick")) {
-    var mention = message.mentions.member.first();
-    if(!mention) return message.channel.send("u want to ping who u want to kick");
-
-    mention.kick("By: " + message.author.tag);
-    
-    message.channel.send("got kicked : " + mention.tag);
-};
-});
 client.login(process.env.BOT_TOKEN);
