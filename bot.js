@@ -339,7 +339,6 @@ client.on('message', function (message) {
     let channel = message.member.voiceChannel;
     channel.join();
         }
-            break;
 case "-play":
         if(!message.guild.voiceConnection){
             message.reply('Im Not In A Voice Channel!');
