@@ -199,7 +199,7 @@ if(message.content.split(' ')[0] == '*bc') {
         message.guild.members.forEach(m => {
             var bc = new Discord.RichEmbed()             
     .setColor('#ff0000')
-                 .addField('ّ', args)
+                 .addField('RGR ANNONCE, args)
             m.send(``,{embed: bc});
         });
     }
@@ -240,8 +240,8 @@ client.on('message', message => {
 });
 client.on('message', message => {
 if (message.content === "*help") {
-message.reply("**Done | تــم**")
-message.reply("**تم ارسال اوامر البوت في الخاص**")
+message.reply("**Done**")
+message.reply("**Ga3 les CMD tsifto lk f PRV**")
 message.react("📩")
 
 }
@@ -264,7 +264,7 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers '     Script By : i1Suhaib ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(` ON ${client.guilds.size} Servers - Prefix *help`,"http://twitch.tv/S-F")
+client.user.setGame(` ON ${client.guilds.size} Servers - Prefix *help`)
 client.user.setStatus("dnd")
 });
 client.on("guildCreate", guild => {
@@ -286,7 +286,7 @@ const secreT = [
 
 
  client.on('message', message => {
-   if (message.content.startsWith("خواطر")) {
+   if (message.content.startsWith("*خواطر")) {
                 if(!message.channel.guild) return message.reply('** This command only for servers**');
   var embed = new Discord.RichEmbed()
   .setColor('RANDOM')
