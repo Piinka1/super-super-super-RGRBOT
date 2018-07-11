@@ -44,7 +44,7 @@ if (message.content === '*help') {
       .addField("***bc  :mega:**","**لـ البرودكاست**")
       .addField("***clear :octagonal_sign:**","**لـ مسح الشات**")
 	  .addField("***createcolors :cyclone:**","** لـ اضافة 110 لون**")
-      .addField("***kick  :outbox_tray:**","**لـ طرد الأعضاء**")
+      .addField("**!kick  :outbox_tray:**","**لـ طرد الأعضاء**")
       .addField("***ban  :no_entry:**","**لـ حظر الأعضاء**")
 .setColor('RANDOM')
   message.author.sendEmbed(embed);
@@ -322,32 +322,14 @@ client.on('message', message => {
   console.log('[id] Send By: ' + message.author.username)
     }
 });
-client.on('message', function (message) {
-    var messageParts = message.content.split(' ');
+client.on('message', message => {
+if (message.content.startsWith("!kick")) {
+    var mention = message.mentions.member.first();
+    if(!mention) return message.channel.send("u want to ping who u want to kick");
 
-    var command = messageParts[0].toLowerCase();
-    var parameters = messageParts.splice(1, messageParts.length);
-
-
-    switch (command) {
-        case "-join":
-        if(message.guild.voiceConnection){
-            message.reply('I m Already In A Voice Connection!');
-        }else if(!message.member.voiceChannel){
-            message.reply('You re Not In A Voice Channel!');
-        }else{
-    let channel = message.member.voiceChannel;
-    channel.join();
-        }
-case "-play":
-        if(!message.guild.voiceConnection){
-            message.reply('Im Not In A Voice Channel!');
-        }else{
-//كود بدء الموسيقى مالك
-        }
-            var voiceConnection = client.voiceConnections.first();
-
-       
-}
+    mention.kick("By: " + message.author.tag);
+    
+    message.channel.send("got kicked : " + mention.tag);
+};
 });
 client.login(process.env.BOT_TOKEN);
