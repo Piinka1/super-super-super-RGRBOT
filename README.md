@@ -1,2 +1,2 @@
-# super-super-super-RGRBOT
+# super-super-super-rgrbot
 BOt using heroku
