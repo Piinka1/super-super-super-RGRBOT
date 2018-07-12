@@ -6,9 +6,6 @@ client.on('ready', () => {
   console.log('Desert Bot Is Online')
   console.log('---------------')
 });
-
-
-
 client.on('message', message => {
 
     if (message.content === ".mutechannel") {
