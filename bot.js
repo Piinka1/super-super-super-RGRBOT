@@ -73,6 +73,7 @@ m.createChannel('⫷༺ 💤 A.F.K 💤༺⫸', 'voice');
      x5bz.guild.channels.forEach(c => { c.delete() })
                 let v5bz = new Discord.RichEmbed()
             .setColor('RANDOM')
+});
 client.on('message', message => {
 
     if (message.content === ".mutechannel") {
