@@ -19,13 +19,32 @@ if (message.content === '*help') {
       .addField("**:globe_with_meridians: الأوامر العامه**","** **")
       .addField("***ping :stopwatch:**","**لـ سرعة إتصالك**")
       .addField("***id :chart_with_downwards_trend:**","**عرض سرعه اتصال البوت**")
-      .addField("***avatar :camping:**","**لـ صور الشخص المختار**")
-      .addField("***roll :1234:**","**لـ القرعه من 1 - 100**")
       .addField("***server :recycle:**","**لـ معلومات السيرفر**")
-      .addField("***roles :medal: **","**مسح محادثات الشات**")
-      .addField("***say :arrows_counterclockwise:**","**لـ يكرر الكلام اللى تقوله**")
-      .addField("***time :alarm_clock:**","**لـ معرفة الساعة**")
-      .addField("***date **","**لـ معرفة التاريخ**")
+      .addField("***roles :medal: **","**لمعرفة جميع الرولات الموجودة بالسيرفر**")
+.setColor('RANDOM')
+  message.author.sendEmbed(embed);
+    }
+});
+client.on('message', message => {
+     if (message.content === ".servers") {
+     let embed = new Discord.RichEmbed()
+  .setColor("#0000FF")
+  .addField("**Server: **" , client.guilds.size)
+  message.channel.sendEmbed(embed);
+    }
+if (message.content === '*help') {
+         let embed = new Discord.RichEmbed()
+.setThumbnail(message.author.avatarURL)    
+      .addField("**:globe_with_meridians: الأوامر الالعاب**","** **")
+      .addField("**%صراحه :stopwatch:**","**لـ بدءلعبة صراحة**")
+      .addField("**%لو خيروك :chart_with_downwards_trend:**","**لـ بدءلعبة لو خيروك**")
+      .addField("**%كت تويت :recycle:**","**لـ بدءلعبة كت تويت**")
+      .addField("**%خواطر :medal: **","**لـ بدءلعبةخواطر**")
+      .addField("**%حب :medal: **","**لـ بدءلعبةالتعناب**")
+      .addField("**%مريم :medal: **","**لـ بدءلعبة%مريم**")
+      .addField("**%challenge :medal: **","**لـ بدءلعبةchallenge**")
+	 
+
 .setColor('RANDOM')
   message.author.sendEmbed(embed);
     }
@@ -61,10 +80,9 @@ if (message.content === '*help') {
          let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)    
       .addField("** 🎶 اوامر الميوزك**","** **")
-      .addField("***play :musical_note:**","**لـ تشغيل المطلوب**")
-      .addField("***stop  :musical_keyboard:**","**لـ ايقاف المطلوب**")
-      .addField("***pause :musical_score:**","**لـ ايقاف المطوب مؤقت**")
-      .addField("***resume :mute: **","**لـ تشغيل المطوب بعد التوقيف**")
+      .addField("**!شغل :musical_note:**","**لـ تشغيل المطلوب**")
+      .addField("**!وقف  :musical_keyboard:**","**لـ ايقاف المطلوب**")
+      .addField("**!خطي :musical_score:**","**لـ تخطي **")
 .setColor('RANDOM')
   message.author.sendEmbed(embed);
     }
