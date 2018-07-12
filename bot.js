@@ -8,8 +8,7 @@ client.on('ready', () => {
 });
 const fs = require("fs"); 
 const Canvas = require("canvas");
-const jimp = require("jimp");
-const prefix = "+"; 
+const jimp = require("jimp"); 
     client.on("message", message => {
   if (message.author.bot) return;
     if(!message.channel.guild) return;
