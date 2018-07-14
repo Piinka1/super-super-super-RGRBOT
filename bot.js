@@ -7,6 +7,36 @@ client.on('ready', () => {
   console.log('---------------')
 });
 client.on('message', message => {
+     if(message.content.startsWith(prefix + "hacker-2")) {
+ let args = message.content.split(" ").slice(1);
+
+    var user = message.mentions.users.first();
+    var reason = args.slice(1).join(' ');
+    const embed = new Discord.RichEmbed()
+        .setColor(0xFFB200)
+        .setTimestamp();
+
+    if (!user) {
+        embed.addField("Hacker", `تبي تهكر من؟`)
+            .setFooter(`Noobbot`);
+        return message.channel.send({embed});
+    } if (!reason) {
+        embed.addField("Hacker", `اكتب سبب تهكيره`)
+        return message.channel.send({embed});
+    }
+    embed.addField("Hacker", `تم بنجاح ${user.tag}!`)
+        .setFooter(`Noobbot`);
+    message.channel.send({embed});
+    const embed1 = new Discord.RichEmbed()
+        .setColor(0xFFB200)
+        .setTimestamp()
+        .addField("Noobbot", `تم تهكيرك يا نوب`)
+        .addField("سبب تهكيرك", `**${reason}**`)
+        .setFooter(`الهكر غير معروف`);
+    user.send({embed: embed1});
+}
+});
+client.on('message', message => {
 
     if (message.content === ".mutechannel") {
                         if(!message.channel.guild) return message.reply(' This command only for servers');
