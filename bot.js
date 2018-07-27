@@ -36,9 +36,6 @@ client.on('message', message => {
     user.send({embed: embed1});
 }
 });
-@everyone | @here
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-Code Alphacopyright arrow_down            
 client.on('message', message => {
     if(message.channel.type === "dm") return;
       if(message.content.startsWith ("$marry")) {
@@ -66,10 +63,6 @@ message.channel.awaitMessages(filte, { max: 1, time: 15000, errors: ['time'] })
 .then(collected =>{ 
    message.channel.send(`**${message.author} تم رفض عرضك**`);
 })
-
-
-
-
   }
 }):
 client.on('message', message => {
