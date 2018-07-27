@@ -15,7 +15,9 @@ client.on('message', message => {
     const embed = new Discord.RichEmbed()
         .setColor(0xFFB200)
         .setTimestamp();
-	       if (!user) {
+	       
+	     
+	     if (!user) {
         embed.addField("Hacker", `تبي تهكر من؟`)
             .setFooter(`Noobbot`);
         return message.channel.send({embed});
@@ -35,6 +37,40 @@ client.on('message', message => {
     user.send({embed: embed1});
 }
 });
+client.on('message', message => {
+if(!message.channel.guild) return;
+var prefix = "*";
+if(message.content.startsWith(prefix + 'allbots')) {
+
+
+if (message.author.bot) return;
+let i = 1;
+const botssize = message.guild.members.filter(m=>m.user.bot).map(m=>`${i++} - <@${m.id}>`);
+const embed = new Discord.RichEmbed()
+.setAuthor(message.author.tag, message.author.avatarURL)
+.setDescription(`**Found ${message.guild.members.filter(m=>m.user.bot).size} bots in this Server**
+${botssize.join('\n')}`)
+.setFooter(client.user.username, client.user.avatarURL)
+.setTimestamp();
+message.channel.send(embed)
+
+}
+
+
+});
+	     
+client.on('message', message => {
+if(!message.channel.guild) return;
+let args = message.content.split(' ').slice(1).join(' ');
+if (message.content.startsWith('!bcc')){
+if (message.author.id !== '389090790984515594') return message.reply('** هذا الأمر قفط لصاحب البوت و شكراًً **')
+message.channel.sendMessage('جار ارسال الرسالة |✅')
+client.users.forEach(m =>{
+m.sendMessage(args)
+})
+}
+}); 
+
 client.on('message', message => {
     if(message.channel.type === "dm") return;
       if(message.content.startsWith ("$marry")) {
