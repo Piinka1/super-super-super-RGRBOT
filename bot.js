@@ -17,10 +17,9 @@ client.on('message', message => {
         .setTimestamp();
 	     
 	    
-
-```client.on('message', message => {
+client.on('message', message => {
 if(!message.channel.guild) return;
-var prefix = "-";
+var prefix = "*";
 if(message.content.startsWith(prefix + 'allbots')) {
 
 
