@@ -15,10 +15,7 @@ client.on('message', message => {
     const embed = new Discord.RichEmbed()
         .setColor(0xFFB200)
         .setTimestamp();
-	     
-	    
-
-    if (!user) {
+	       if (!user) {
         embed.addField("Hacker", `تبي تهكر من؟`)
             .setFooter(`Noobbot`);
         return message.channel.send({embed});
