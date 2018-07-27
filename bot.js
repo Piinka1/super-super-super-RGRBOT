@@ -64,7 +64,7 @@ message.channel.awaitMessages(filte, { max: 1, time: 15000, errors: ['time'] })
    message.channel.send(`**${message.author} تم رفض عرضك**`);
 })
   }
-}):
+});
 client.on('message', message => {
 
     if (message.content === ".mutechannel") {
